@@ -280,18 +280,18 @@ h2 {
 }
 
 /* For the hero image on the child page */
-#hero-img-rivers{
-    width: 100%;         /* Makes the image responsive */
-    height: auto;        /* Maintains aspect ratio */
-    object-fit: cover;   /* Ensures the image fills the container without distortion */
-    border: 10px solid #d9c2a3;  /* Similar border to the images on the child page */
+#hero-img-rivers {
+    width: 100%;         /* Makes the image responsive and fills the width */
+    height: auto;        /* Maintains the aspect ratio */
+    max-height: 500px;   /* Limits the maximum height of the image */
+    border: 10px solid #d9c2a3;  /* Same border as the homepage images */
     box-shadow: 5px 5px 10px #6f7364; /* Adds a shadow similar to the homepage image */
-    transition: transform 0.5s ease;  /* Adds smooth hover effect */
+    transition: transform 0.5s ease, opacity 0.5s ease;  /* Adds smooth hover effect */
 }
 
 #hero-img-rivers:hover {
-    transform: scale(1.1);  /* Slight zoom effect when hovered */
-    opacity: 0.8;           /* Faint opacity change on hover */
+    transform: scale(1.05);  /* Slight zoom effect when hovered */
+    opacity: 0.8;            /* Faint opacity change on hover */
 }
 
 /* Make sure the container also behaves responsively */
