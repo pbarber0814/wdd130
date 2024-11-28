@@ -16,9 +16,17 @@ nav {
     text-align: center;
     color: white;
 }
+#hero-msg-rivers h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
 #hero-msg h4 {
     text-align: center;
     color: white;
+}
+#hero-msg-rivers h4 {
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
 .button-box {
     text-align: center;
@@ -93,6 +101,11 @@ footer {
     align-items: center;
 }
 .home-title {
+    color: black;
+    font-family: "Oswald", Helvatica, Sans-serif; 
+    margin-top: 10px;
+}
+.home-title-rivers {
     color: black;
     font-family: "Oswald", Helvatica, Sans-serif; 
     margin-top: 10px;
@@ -183,6 +196,11 @@ h2 {
     z-index: -1;
 }
 #hero-msg {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 100px;
+}
+#hero-msg-rivers {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     margin-top: 100px;
@@ -281,11 +299,13 @@ h2 {
 
 /* For the hero image on the child page */
 #hero-img-rivers {
-    width: 100%;         /* Makes the image responsive and fills the width */
-    height: auto;        /* Maintains the aspect ratio */
-    max-height: 500px;   /* Limits the maximum height of the image */
+    width: 80%;               /* Limits the width to 80% of the container */
+    max-width: 1200px;        /* Optional: prevents the image from growing too large */
+    height: auto;             /* Maintains the aspect ratio */
     border: 10px solid #d9c2a3;  /* Same border as the homepage images */
     box-shadow: 5px 5px 10px #6f7364; /* Adds a shadow similar to the homepage image */
+    margin: 20px auto;        /* Centers the image horizontally and adds space above/below */
+    display: block;           /* Ensures it's a block-level element */
     transition: transform 0.5s ease, opacity 0.5s ease;  /* Adds smooth hover effect */
 }
 
