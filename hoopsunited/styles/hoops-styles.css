@@ -1,28 +1,153 @@
-nav {
-    text-align: center;
-    color: gray;
-    text-decoration: none;
-    padding: 35px;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-white);
+    background-color: var(--primary-color);
+    line-height: 1.5;
+  }
+  
+  /* Header and Footer */
+  header, footer {
     display: flex;
-    justify-content: space-around;
-}
-header {
-    background-color: #D9663D; 
-    font-family: "Oswald", Helvatica, Sans-serif;
-    display: grid;
-    grid-template-columns: 150px auto; 
-}
-body {
-    background-color: gray;
-}
-
-
-footer {
-    background-color: #D9663D;
-    color: #D93611;
-    padding: 25px 50px;
-    margin-top: 200px;
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-}
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background-color: var(--nav-background-color);
+    color: var(--headline-color-on-color);
+  }
+
+  header nav, footer nav {
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  header nav a, footer nav a {
+    margin: 0 10px;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-family: var(--heading-font);
+  }
+  
+  header nav a:hover, footer nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  /* Hero Section */
+  hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+  }
+  
+  hero img {
+    max-width: calc(100% - 40px);
+    height: 300px;
+    object-fit: cover;
+    border: 20px solid var(--paragraph-background-color);
+  }
+  
+  hero h1 {
+    margin-top: 10px;
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+  }
+  
+  /* Content Sections */
+  .text-content, .text-with-image, .closing-image {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+    border-radius: 5px;
+  }
+  
+  /* Text Content */
+  .text-content p {
+    text-align: center;
+  }
+  
+  /* Text With Image */
+  .text-with-image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-with-image img {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .text-with-image p {
+    flex-grow: 1;
+  }
+  
+  /* Closing Image */
+  .closing-image img {
+    max-width: calc(100% - 40px);
+    height: 300px;
+    object-fit: cover;
+    border: 20px solid var(--paragraph-background-color);
+  }
+  
+  /* Footer */
+  footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  footer p, footer div.socail a {
+    margin: 10px;
+  }
+  
+  footer div.socail img {
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  header nav a:hover, footer nav a:hover {
+    color: var(--nav-hover-link-color); /* Changes text color on hover */
+    background-color: var(--accent1-color); /* Changes background color on hover */
+    padding: 5px 10px; /* Adds padding for better visual effect */
+    border-radius: 5px; /* Smooth, rounded edges */
+  }
+  
+  :root {
+    /* change the values below to your colors from your palette */
+    --primary-color: gray   ;
+    --secondary-color: #D9663D ;
+    --accent1-color: #D99982;
+    --accent2-color: #D93611;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Kanit";
+    --paragraph-font: Roboto Condensed, Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: black;  /* headlines on a white background */ 
+    --headline-color-on-color: white; /* headlines on a colored background */ 
+    --paragraph-color-on-white: #D93611; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #D9663D  ;
+    --nav-link-color: black;
+    --nav-background-color: gray;
+    --nav-hover-link-color: black;
+    --nav-hover-background-color: #D9663D;
+  }
