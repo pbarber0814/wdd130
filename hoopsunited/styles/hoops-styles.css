@@ -1,0 +1,28 @@
+nav {
+    text-align: center;
+    color: gray;
+    text-decoration: none;
+    padding: 35px;
+    display: flex;
+    justify-content: space-around;
+}
+header {
+    background-color: #D9663D; 
+    font-family: "Oswald", Helvatica, Sans-serif;
+    display: grid;
+    grid-template-columns: 150px auto; 
+}
+body {
+    background-color: gray;
+}
+
+
+footer {
+    background-color: #D9663D;
+    color: #D93611;
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
