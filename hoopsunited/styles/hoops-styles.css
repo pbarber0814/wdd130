@@ -101,7 +101,7 @@
   
   /* Closing Image */
   .closing-image img {
-    max-width: calc(100% - 40px);
+    max-width: 900px;
     height: 300px;
     object-fit: cover;
     border: 20px solid var(--paragraph-background-color);
@@ -218,23 +218,31 @@
   height: 300px;
   gap: 10px;
   margin-bottom: 10px;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
 }
 
 .text-content-with-image-p3a img {
+  order: 2; /* Ensures the image appears on the right side */
+  flex-shrink: 0;
   width: 25%; /* Image takes up 1/4 of the section width */
-  height: 100%; /* Image matches section height */
+  height: 100%; /* Matches section height */
   object-fit: cover;
   border-radius: 5px;
+  display: block;
+  padding: 15px;
 }
 
 .text-content-with-image-p3a p {
-  flex-grow: 1; /* Text takes up remaining space */
+  order: 1; /* Ensures the paragraph appears on the left side */
+  flex-grow: 1;
   padding: 10px;
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
   border-radius: 5px;
 }
+
 
 /* Text with Image (Section B) */
 .text-with-image-p3b {
@@ -244,13 +252,16 @@
   height: 300px;
   gap: 10px;
   margin-bottom: 10px;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
 }
 
 .text-with-image-p3b img {
   width: 25%; /* Image takes up 1/4 of the section width */
   height: 100%; /* Image matches section height */
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .text-with-image-p3b p {
@@ -269,6 +280,8 @@
   justify-content: space-between;
   height: 150px;
   gap: 10px;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
   margin-bottom: 10px;
   padding-bottom: 10px; /* Adds padding before footer */
 }
@@ -278,6 +291,7 @@
   height: 100%; /* Image matches section height */
   object-fit: cover;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .closing-image-with-text-p3 p {
