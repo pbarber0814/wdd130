@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const firstName = document.getElementById("firstName").value;
+            const newsletter = document.getElementById("newsletter").checked;
+            alert(`You typed a First Name: ${firstName}!\nNewsletter: ${newsletter}`);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <!-- First Name -->
+        <div class="input-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <!-- Last Name -->
+        <div class="input-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="input-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Gender -->
+        <div class="radio-group">
+            <label>Gender:</label>
+            <label><input type="radio" id="male" name="gender" value="Male"> Male</label>
+            <label><input type="radio" id="female" name="gender" value="Female"> Female</label>
+        </div>
+
+        <!-- Newsletter and Updates -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="newsletter" name="newsletter"> Subscribe to Newsletter</label>
+            <label><input type="checkbox" id="updates" name="updates"> Receive Daily Updates</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
