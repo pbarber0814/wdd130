@@ -162,7 +162,7 @@
 }
 
 /* Button Strip Section */
-.button-strip-p2 {
+.button-strip-p2, .button-strip-p3 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -172,7 +172,7 @@
   background-color: var(--primary-color);
 }
 
-.button-strip-p2 button {
+.button-strip-p2 button, .button-strip-p3 button {
   flex: 1; /* Equal button width */
   margin: 0 5px;
   font-family: var(--heading-font);
@@ -186,7 +186,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button-strip-p2 button:hover {
+.button-strip-p2 button:hover, .button-strip-p3 button:hover {
   background-color: var(--accent2-color);
   color: var(--headline-color-on-white);
 }
@@ -205,6 +205,87 @@
   height: 100%;
   object-fit: cover;
   border: 10px solid var(--paragraph-background-color);
+  border-radius: 5px;
+}
+
+/* Page 3 Styles */
+
+/* Text Content with Image (Section A) */
+.text-content-with-image-p3a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.text-content-with-image-p3a img {
+  width: 25%; /* Image takes up 1/4 of the section width */
+  height: 100%; /* Image matches section height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.text-content-with-image-p3a p {
+  flex-grow: 1; /* Text takes up remaining space */
+  padding: 10px;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+  border-radius: 5px;
+}
+
+/* Text with Image (Section B) */
+.text-with-image-p3b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.text-with-image-p3b img {
+  width: 25%; /* Image takes up 1/4 of the section width */
+  height: 100%; /* Image matches section height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.text-with-image-p3b p {
+  flex-grow: 1; /* Text takes up remaining space */
+  padding: 10px;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+  border-radius: 5px;
+}
+
+/* Closing Image with Text */
+.closing-image-with-text-p3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px; /* Adds padding before footer */
+}
+
+.closing-image-with-text-p3 img {
+  width: 20%; /* Image takes up 1/5 of the section width */
+  height: 100%; /* Image matches section height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.closing-image-with-text-p3 p {
+  flex-grow: 1; /* Text takes up remaining space */
+  padding: 10px;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
   border-radius: 5px;
 }
   
